@@ -1,0 +1,318 @@
+/*
+font-family: 'Open Sans', sans-serif;
+*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+.App {
+    text-align: left;
+}
+header {
+    background-color: #2e64a1;
+    padding: 16px 0;
+}
+header h1 {
+    color: white;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 40px;
+    display: inline-block;
+    position: relative;
+    bottom: 35px;
+    margin-left: 15px;
+}
+nav {
+    background-color: #6ea9ed;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    flex-grow: 1;
+    /* especifica el factor de crecimiento de un elemento flexible (que tiene asignado display:flex), en su dirección principal */
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+nav ul li a:hover {background-color: rgba(0,0,0, 0.3);}
+nav ul li a.activo {background-color: #4c76a5;}    
+
+footer {
+    background-color: #ddd;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.holder {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #2e64a1;
+    font-weight: 300;
+}
+.homeimg img {
+    max-width: 100%;
+}
+
+.columnas {
+    display: flex;
+    gap: 20px;
+}
+.bienvenidos {
+    width: 75%;
+}
+.testimonios {
+    width: 25%;
+}
+.testimonio {
+    background-color: #ddd;
+    padding: 16px;
+}
+.testimonio .cita {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    display: flex;
+}
+.testimonio .autor {
+    font-size: 12px;
+    margin: 16px 0;
+    display: flex;
+    justify-content: center;
+}
+/* fin home */
+/* inicio nosotros */
+.historia {
+    font-size: 13px;
+}
+.personas {
+    display: flex;
+    /*gap:20px;*/
+    justify-content: space-between;
+}
+.persona {
+    border: #ddd solid 1px;
+    border-radius: 5px;
+    width: 18%;
+    text-align: center;
+    padding: 15px 12px;
+    box-sizing: border-box;
+}
+.persona img {
+    border-radius: 50%;
+    width: 40%;
+    box-shadow: 0 0 2px #333;
+}
+.persona h5,
+.persona h6 {
+    margin: 0;
+    color: #2e64a1;
+    font-weight: normal;
+}
+.persona h5 {
+    font-size: 14px;
+}
+.persona h6 {
+    font-style: italic;
+}
+.persona p {
+    font-size: 10px;
+    line-height: 12px;
+}
+/* fin nosotros */
+
+/* inicio servicios */
+.servicios {
+}
+    .servicios .servicio {
+        display: flex;
+        justify-content: space-around;
+        border: #ddd solid 1px;
+        border-radius: 5px;
+        text-align: left;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+    .servicios .servicio:nth-child(2n) {
+        flex-direction: row-reverse;
+    }
+    .servicios .servicio .descripcion {
+        padding: 15px 12px;
+        font-size: 12px;
+    }
+    .servicios .servicio  .descripcion h3 {
+        color: #2e64a1;
+        font-size: 15px;
+        font-weight: normal;
+        font-style: italic;
+        margin-top: 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #2e64a1;
+    }
+    .servicios .servicio img {
+        border-radius: 15px;
+        padding: 15px 12px;
+
+    }
+/* fin servicios */
+
+/* inicio galería */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.galeria a img {
+    border: 1px solid #ddd; /* Gray border */
+    border-radius: 4px;  /* Rounded border */
+    padding: 5px; /* Some padding */
+    transition: all 0.5s ease;
+}
+  
+/* Add a hover effect (blue shadow) */
+.galeria a img:hover {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+/* fin galería */
+
+/* inicio contacto */
+.contacto {
+    display: flex;
+    gap: 24px;
+}
+    .contacto div {
+        width: 100%;
+    }
+    .datos p {
+        font-size: 14px;
+    }
+    .datos ul li {
+        font-size: 13px;
+        list-style: none;
+    }
+    .formulario p {
+        display: flex; /*ponemos label y el elemento siguiente en la misma línea*/
+    }
+    .formulario p input,
+    .formulario p textarea {
+        /*width: 70%;*/
+        width: 100%;
+        background-color: #ddd;
+        border-radius: 3px;
+        border: 1px solid #999;
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    .formulario p label {
+        min-width: 80px;
+        display: flex;
+        align-items: center;
+    }
+    .formulario textarea {
+        height: 150px;
+        resize: none;
+    }
+/*
+.formulario p label.arriba {
+    align-items: start;
+}
+*/
+.formulario p:nth-child(4) {
+    align-items: start;
+}
+/*
+:nth-child(even) >> pares
+:nth-child(odd) >> impares
+:nth-child(4) >> el hijo X
+Hay más...
+*/
+
+.formulario input[type="submit"]{
+    background-color: #6ea9ed;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.3);
+    font-size: 16px;
+    padding: 6px 12px;
+    width: auto;
+    cursor: pointer;
+    position: relative;
+    left: 80px;
+}
+.formulario input[type="submit"]:hover {
+    background-color: #4c76a5;
+}
+/* fin contacto */
+
+@media screen and (max-width:768px){
+    .holder {
+        padding: 0 10px;
+    }
+    nav ul.holder {
+        padding: 0;
+    }
+}
+@media screen and (max-width:550px){
+    .columnas {
+        flex-direction: column;
+    }
+    .bienvenidos,
+    .testimonios {
+        width: 100%;
+    }
+    .testimonio {
+        max-width: 220px;
+        margin: 0 auto;
+    }
+    .personas {
+        flex-wrap: wrap;
+    }
+    .persona {
+        width: 47%;
+        margin-bottom: 10px;
+    }
+
+    .contacto {
+        flex-direction: column;
+    }
+
+    header .holder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    header .logo img {
+        max-width: 80px;
+    }
+    header h1 {
+        position: static;
+        font-size: 30px;
+    }
+
+    nav ul.holder {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:320px){
+    header .holder {
+        flex-direction: column;
+    }
+    header h1 {
+        margin: 10px;
+        font-size: 20px;
+    }
+}

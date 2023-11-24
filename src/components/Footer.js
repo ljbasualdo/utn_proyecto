@@ -1,7 +1,7 @@
 const Footer = (props) => {
     return(
         <footer>
-            <p>Diseñado por <strong>Leonardo Basualdo</strong></p>
+            <small>Diseñado por <strong>Leonardo Basualdo</strong> | 2023</small>
         </footer>
     )
 }
